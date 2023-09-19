@@ -8,21 +8,23 @@ $purple-1: #903aff;
 $main-purple: #d434fe;
 $weight: 700;
 $button-gradient: linear-gradient(276deg, #903aff 0%, #d434fe 61%);
+$fs-1: 36px;
+$fs-2: 16px;
 
 @font-face {
-  font-family: "Montserrat-Light", sans-serif;
+  font-family: "Montserrat-Light";
   src: url("./assets//fonts//Montserrat/Montserrat-Light.ttf") format("ttf");
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat-Italic", sans-serif;
+  font-family: "Montserrat-Italic";
   src: url("./assets/fonts/Montserrat/Montserrat-Italic.ttf") format("ttf");
   font-style: italic;
 }
 
 @font-face {
-  font-family: "Montserrat-Bold", sans-serif;
+  font-family: "Montserrat-Bold";
   src: url("./assets/fonts/Montserrat/Montserrat-Bold.ttf") format("ttf");
   font-weight: $weight;
 }

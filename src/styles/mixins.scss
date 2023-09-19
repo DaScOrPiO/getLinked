@@ -3,3 +3,8 @@
 @mixin text-colored {
   color: $main-purple;
 }
+
+@mixin button-color {
+  background: $button-gradient;
+  color: $white;
+}
