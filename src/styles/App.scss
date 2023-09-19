@@ -12,30 +12,30 @@ $fs-1: 36px;
 $fs-2: 16px;
 
 @font-face {
-  font-family: "Montserrat-Light", sans-serif;
+  font-family: "Montserrat-Light";
   src: url("./assets//fonts//Montserrat/Montserrat-Light.ttf") format("ttf");
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat-Italic", sans-serif;
+  font-family: "Montserrat-Italic";
   src: url("./assets/fonts/Montserrat/Montserrat-Italic.ttf") format("ttf");
   font-style: italic;
 }
 
 @font-face {
-  font-family: "Montserrat-Bold", sans-serif;
+  font-family: "Montserrat-Bold";
   src: url("./assets/fonts/Montserrat/Montserrat-Bold.ttf") format("ttf");
   font-weight: $weight;
 }
 
 @font-face {
-  font-family: "Oswald-Light", sans-serif;
+  font-family: "Oswald-Light";
   src: url("./assets/fonts/Oswald/Oswald-Light.ttf") format("ttf");
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Oswald-Bold", sans-serif;
+  font-family: "Oswald-Bold";
   src: url("./assets/fonts/Oswald/Oswald-Bold.ttf") format("ttf");
 }

@@ -6,7 +6,7 @@ body {
   min-height: 100vh;
   background-color: $general-background;
   color: $white;
-  font-family: "Montserrat-Light";
+  font-family: "Montserrat-Light", sans-serif;
 }
 
 .button {
@@ -23,7 +23,7 @@ body {
 .navigation-container {
   .brand-text {
     font-size: $fs-1;
-    font-family: "Oswald-Bold";
+    font-family: "Oswald-Bold", sans-serif;
     font-weight: $weight;
   }
   .navigations {
