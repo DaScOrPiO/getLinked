@@ -1,0 +1,6 @@
+@import "./mixins.scss";
+@import "./App.scss";
+
+.colored-text {
+  @include text-colored;
+}
