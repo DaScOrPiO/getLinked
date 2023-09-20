@@ -55,7 +55,7 @@ body {
   .box-1 {
     background: $background-gradient2;
     position: relative;
-    .ellipsis-position{
+    .ellipsis-position {
       position: absolute;
       top: -8%;
       left: 2%;
@@ -160,6 +160,54 @@ body {
   }
 }
 
+.section-5-items {
+  .box-1 {
+    .some-texts {
+      h1 {
+        font-size: $fs-5;
+        font-weight: 700;
+      }
+      p {
+        font-size: $fs-8;
+        line-height: 27.56px;
+      }
+    }
+    .faq-container {
+      .faq {
+        border-bottom: 2px solid #d434fe;
+        .faq-answer {
+          p {
+            background-image: $button-gradient;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+          }
+        }
+      }
+    }
+  }
+  .box-2 {
+    .questions-container {
+      position: relative;
+      .question-1 {
+        position: absolute;
+        top: 10%;
+        left: 15%;
+      }
+      .question-2 {
+        position: absolute;
+        top: -8%;
+        left: 30%;
+      }
+      .question-3 {
+        position: absolute;
+        top: 2%;
+        left: 50%;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .navigation-container {
     .hamburger {
@@ -204,6 +252,17 @@ body {
     .box-1 {
       .ellipsis-position {
         display: none;
+      }
+    }
+  }
+
+  .section-5-items {
+    .box-1{
+      margin-bottom: 20%;
+    }
+    .box-2 {
+      .questions-container {
+        position: relative;
       }
     }
   }
@@ -297,18 +356,32 @@ body {
       .ellipsis-position {
         display: none;
       }
+      .box-2 {
+        h1 {
+          font-size: $fs-4;
+          line-height: 26.6px;
+        }
+        .paragraph-container {
+          p {
+            font-size: fs-10;
+            line-height: 20.82px;
+          }
+        }
+      }
     }
-    // .box-2 {
-    //   h1 {
-    //     font-size: $fs-4;
-    //     line-height: 26.6px;
-    //   }
-    //   .paragraph-container {
-    //     p {
-    //       font-size: fs-10;
-    //       line-height: 20.82;
-    //     }
-    //   }
-    // }
+  }
+
+  .section-5-items {
+    .box-1{
+      margin-bottom: 20%;
+    }
+    .box-2 {
+      .questions-container {
+        position: relative;
+        .question-2 {
+          top: -25%;
+        }
+      }
+    }
   }
 }
