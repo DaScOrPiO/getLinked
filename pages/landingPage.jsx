@@ -3,6 +3,7 @@ import Section1 from "../src/components/sections/Section1Contents";
 import Section2 from "../src/components/sections/Section2Contents";
 import Section3 from "../src/components/sections/Section3Contents";
 import Section4 from "../src/components/sections/section4Contents";
+import Section5 from "../src/components/sections/section5Contents";
 
 export default function LandingPage() {
   return (
@@ -23,6 +24,9 @@ export default function LandingPage() {
         </section>
         <section className="">
           <Section4 />
+        </section>
+        <section className="">
+          <Section5 />
         </section>
       </div>
     </main>
