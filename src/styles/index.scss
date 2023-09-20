@@ -15,9 +15,13 @@ body {
   border-radius: 4px;
   padding: 0.4rem 0%;
 }
+.wrapper {
+  padding: 0 3rem !important;
+}
 
 .header {
   border-bottom: 1px solid $white;
+  padding: 0 3rem !important;
 }
 
 .navigation-container {
@@ -45,6 +49,33 @@ body {
   border: 2px solid transparent;
   border-image: $button-gradient;
   border-image-slice: 1;
+}
+
+.section-4-items {
+  .box-1 {
+    background: $background-gradient2;
+    position: relative;
+    .ellipsis-position{
+      position: absolute;
+      top: -8%;
+      left: 2%;
+    }
+  }
+  .box-2 {
+    h1 {
+      font-size: $fs-5;
+      font-family: "Oswald-Bold", sans-serif;
+      font-weight: 700;
+    }
+    .paragraph-container {
+      p {
+        font-size: $fs-2;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        line-height: 27.76px;
+      }
+    }
+  }
 }
 
 .section-3-items {
@@ -164,7 +195,16 @@ body {
     .arrow-position {
       position: absolute;
       left: 48%;
-      top: 156%;
+      top: 153%;
+      display: none;
+    }
+  }
+
+  .section-4-items {
+    .box-1 {
+      .ellipsis-position {
+        display: none;
+      }
     }
   }
 }
@@ -247,7 +287,28 @@ body {
     .arrow-position {
       position: absolute;
       left: 42%;
-      top: 138%;
+      top: 122%;
+      display: none;
     }
+  }
+
+  .section-4-items {
+    .box-1 {
+      .ellipsis-position {
+        display: none;
+      }
+    }
+    // .box-2 {
+    //   h1 {
+    //     font-size: $fs-4;
+    //     line-height: 26.6px;
+    //   }
+    //   .paragraph-container {
+    //     p {
+    //       font-size: fs-10;
+    //       line-height: 20.82;
+    //     }
+    //   }
+    // }
   }
 }

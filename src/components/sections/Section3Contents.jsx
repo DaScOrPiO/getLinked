@@ -4,7 +4,7 @@ import Star from "../reusables/Star";
 
 export default function Section3() {
   return (
-    <div className="section-3-items flex flex-wrap lg:flex-row sm:flex-col w-full sm:h-auto lg:h-full py-12">
+    <div className="section-3-items flex flex-wrap-reverse lg:flex-row sm:flex-col w-full sm:h-auto lg:h-full py-12">
       <div
         className="box-1 flex items-center justify-center flex-col break-words 
       lg:w-2/4 sm:w-full lg:h-full sm:h-2/4 lg:m-auto"

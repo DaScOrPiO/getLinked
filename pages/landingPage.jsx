@@ -2,6 +2,7 @@ import Navigation from "../src/components/nav/Navigation";
 import Section1 from "../src/components/sections/Section1Contents";
 import Section2 from "../src/components/sections/Section2Contents";
 import Section3 from "../src/components/sections/Section3Contents";
+import Section4 from "../src/components/sections/section4Contents";
 
 export default function LandingPage() {
   return (
@@ -9,16 +10,21 @@ export default function LandingPage() {
       <header className="header px-12">
         <Navigation />
       </header>
-      <section className="px-12 mb-56">
-        <Section1 />
-      </section>
+      <div className="wrapper">
+        <section className="mb-56">
+          <Section1 />
+        </section>
 
-      <section className="px-12 mt-56">
-        <Section2 />
-      </section>
-      <section className="px-12">
-        <Section3 />
-      </section>
+        <section className="mt-56">
+          <Section2 />
+        </section>
+        <section className="">
+          <Section3 />
+        </section>
+        <section className="">
+          <Section4 />
+        </section>
+      </div>
     </main>
   );
 }
