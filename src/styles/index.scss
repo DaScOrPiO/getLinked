@@ -47,6 +47,14 @@ body {
   border-image-slice: 1;
 }
 
+.section-3-items {
+  .box-1 {
+    background: $background-gradient2;
+  }
+  .box-2 {
+    background: $background-gradient2;
+  }
+}
 .section-1-items {
   height: 80vh;
   font-family: "Oswald-Bold", sans-serif;
@@ -71,7 +79,7 @@ body {
       h1 {
         font-size: $fs-6;
       }
-      span{
+      span {
         font-size: 1rem;
       }
     }
@@ -100,6 +108,27 @@ body {
   }
 }
 
+.section-2-items,
+.section-3-items {
+  height: 60vh;
+  h1 {
+    font-size: $fs-5;
+    line-height: 42.56px;
+    font-family: "Oswald-Bold", sans-serif;
+    font-weight: 700;
+  }
+  p {
+    font-size: $fs-8;
+    line-height: 27.5px;
+  }
+
+  .arrow-position {
+    position: absolute;
+    left: 42%;
+    top: 200%;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .navigation-container {
     .hamburger {
@@ -125,6 +154,17 @@ body {
     .chain-position {
       top: 35%;
       left: 74%;
+    }
+  }
+
+  .section-2-items,
+  .section-3-items {
+    height: auto !important;
+
+    .arrow-position {
+      position: absolute;
+      left: 48%;
+      top: 156%;
     }
   }
 }
@@ -190,6 +230,24 @@ body {
     .chain-position {
       top: 2%;
       left: 68%;
+    }
+  }
+
+  .section-2-items,
+  .section-3-items {
+    height: auto;
+    h1 {
+      font-size: $fs-9;
+    }
+    p {
+      font-size: $fs-8;
+      line-height: 27.5px;
+    }
+
+    .arrow-position {
+      position: absolute;
+      left: 42%;
+      top: 138%;
     }
   }
 }
