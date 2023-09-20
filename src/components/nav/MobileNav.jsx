@@ -11,7 +11,7 @@ export default function MobileNav({ innerWidth, showNav, setShowMobileNav }) {
     <>
       {innerWidth <= 767 && showNav && (
         <div
-          className="navigations-mobile flex justify-around w-full"
+          className="navigations-mobile flex justify-around w-full z-20"
           ref={mobileNav}
         >
           <ul className="links-container flex">

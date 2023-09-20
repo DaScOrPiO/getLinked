@@ -8,34 +8,45 @@ $purple-1: #903aff;
 $main-purple: #d434fe;
 $weight: 700;
 $button-gradient: linear-gradient(276deg, #903aff 0%, #d434fe 61%);
+$background-gradient: radial-gradient(#440981 9%, #100b20 35%);;
 $fs-1: 36px;
 $fs-2: 16px;
+$fs-3: 80px;
+$fs-4: 20px;
+$fs-5: 32px;
+$fs-6: 64px;
+$fs-7: 48px;
 
 @font-face {
   font-family: "Montserrat-Light";
-  src: url("./assets//fonts//Montserrat/Montserrat-Light.ttf") format("ttf");
+  src: url("../assets//fonts//Montserrat/Montserrat-Light.ttf") format("ttf");
   font-style: normal;
 }
 
 @font-face {
   font-family: "Montserrat-Italic";
-  src: url("./assets/fonts/Montserrat/Montserrat-Italic.ttf") format("ttf");
+  src: url("../assets/fonts/Montserrat/Montserrat-Italic.ttf") format("ttf");
   font-style: italic;
 }
 
 @font-face {
   font-family: "Montserrat-Bold";
-  src: url("./assets/fonts/Montserrat/Montserrat-Bold.ttf") format("ttf");
+  src: url("../assets/fonts/Montserrat/Montserrat-Bold.ttf") format("ttf");
   font-weight: $weight;
 }
 
 @font-face {
   font-family: "Oswald-Light";
-  src: url("./assets/fonts/Oswald/Oswald-Light.ttf") format("ttf");
+  src: url("../assets/fonts/Oswald/Oswald-Light.ttf") format("ttf");
   font-style: normal;
 }
 
 @font-face {
   font-family: "Oswald-Bold";
-  src: url("./assets/fonts/Oswald/Oswald-Bold.ttf") format("ttf");
+  src: url("../assets/fonts/Oswald/Oswald-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Unica One";
+  src: url("../assets/fonts/Unica\ one/") format("ttf");
 }
