@@ -47,10 +47,84 @@ body {
   border-image-slice: 1;
 }
 
+.section-1-items {
+  height: 80vh;
+  font-family: "Oswald-Bold", sans-serif;
+  background: $background-gradient;
+  h1 {
+    font-size: $fs-1;
+    font-weight: 700;
+  }
+  .box-1 {
+    .section-1-header {
+      font-family: "Oswald-Bold", sans-serif;
+      font-size: $fs-3;
+      font-weight: 700;
+      line-height: 98.4px;
+    }
+    p {
+      font-size: $fs-4;
+    }
+
+    .time {
+      font-family: "Unica One", cursive !important;
+      h1 {
+        font-size: $fs-6;
+      }
+      span{
+        font-size: 1rem;
+      }
+    }
+  }
+  .box-2 {
+    // position: relative;
+    .image-con-1,
+    .image-con-2 {
+      position: absolute;
+    }
+  }
+
+  .creative-position {
+    top: -10%;
+    left: 39%;
+  }
+
+  .fire-position {
+    top: 28%;
+    left: 50%;
+  }
+
+  .chain-position {
+    top: 25%;
+    left: 43%;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .navigation-container {
     .hamburger {
       display: none;
+    }
+  }
+
+  .section-1-items {
+    h1 {
+      font-size: $fs-2;
+    }
+
+    .creative-position {
+      top: -18%;
+      left: 68%;
+    }
+
+    .fire-position {
+      top: 40%;
+      left: 86%;
+    }
+
+    .chain-position {
+      top: 35%;
+      left: 74%;
     }
   }
 }
@@ -76,6 +150,46 @@ body {
           margin-bottom: 2%;
         }
       }
+    }
+  }
+  .section-1-items {
+    height: auto;
+    .box-1 {
+      align-items: center;
+      justify-content: center;
+      .section-1-header {
+        font-size: $fs-5;
+        line-height: 39.36px;
+      }
+      p {
+        font-size: $fs-4;
+      }
+      .time {
+        font-size: $fs-7;
+      }
+    }
+
+    .box-2 {
+      .image-con-1,
+      .image-con-2 {
+        top: 100%;
+        left: 0;
+      }
+    }
+
+    .creative-position {
+      top: -25%;
+      left: 60%;
+    }
+
+    .fire-position {
+      top: 18%;
+      left: 89%;
+    }
+
+    .chain-position {
+      top: 2%;
+      left: 68%;
     }
   }
 }

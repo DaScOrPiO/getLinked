@@ -34,7 +34,7 @@ export default function Navigation() {
         get<span className="colored-text">linked</span>
       </div>
 
-      <div className="hamburger z-10" onClick={toggleNav}>
+      <div className="hamburger z-30" onClick={toggleNav}>
         {!showobileNav ? (
           <img src={navSvg} alt="hamburger" />
         ) : (

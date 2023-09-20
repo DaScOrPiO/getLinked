@@ -1,15 +1,16 @@
 import Navigation from "./components/nav/Navigation";
+import Section1 from "./components/sections/Section1Contents";
 
 function App() {
   return (
-    <div className="app-container">
+    <main className="app-container">
       <header className="header px-12">
         <Navigation />
       </header>
-      <div>
-        <h1 className="colored-text">Hello World</h1>
-      </div>
-    </div>
+      <section className="px-12">
+        <Section1 />
+      </section>
+    </main>
   );
 }
 
