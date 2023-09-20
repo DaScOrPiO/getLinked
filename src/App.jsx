@@ -1,6 +1,6 @@
-import LandingPage from "./pages/landingPage";
-import Contact from "./pages/contact";
-import Register from "./pages/register";
+import LandingPage from "../pages/landingPage";
+import Contact from "../pages/contact";
+import Register from "../pages/register";
 import { Routes, Route } from "react-router-dom";
 
 function App() {

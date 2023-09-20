@@ -1,7 +1,7 @@
-import Navigation from "../components/nav/Navigation";
-import Section1 from "../components/sections/Section1Contents";
-import Section2 from "../components/sections/Section2Contents";
-import Section3 from "../components/sections/Section3Contents";
+import Navigation from "../src/components/nav/Navigation";
+import Section1 from "../src/components/sections/Section1Contents";
+import Section2 from "../src/components/sections/Section2Contents";
+import Section3 from "../src/components/sections/Section3Contents";
 
 export default function LandingPage() {
   return (
