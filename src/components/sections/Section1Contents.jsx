@@ -6,8 +6,33 @@ import creative from "../../assets/images/Creative 1 (1).png";
 import unnamed from "../../assets/images/1f4a5 (1).png";
 import line from "../../assets/images/line.svg";
 import Star from "../reusables/Star";
+import { useState, useEffect } from "react";
 
 export default function Section1() {
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  // Update the current time every second
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  // Function to format a number with leading zero
+  const formatWithLeadingZero = (number) => {
+    return number < 10 ? `0${number}` : number;
+  };
+
+  // Function to get the current hour in 12-hour format
+  const getCurrentHourIn12HourFormat = () => {
+    const hours = currentTime.getHours() % 12 || 12; // Convert 0 to 12 for 12-hour format
+    return `${hours}`;
+  };
+
   return (
     <div className="section-1-items w-full py-12">
       <div className="flex flex-col items-end mb-24">
@@ -33,7 +58,11 @@ export default function Section1() {
 
           <div className="time">
             <h1>
-              00<span className="mr-2">H </span>00<span>M</span> 00
+              {getCurrentHourIn12HourFormat()}
+              <span className="mr-2">H </span>
+              {formatWithLeadingZero(currentTime.getMinutes())}
+              <span>M</span>
+              {formatWithLeadingZero(currentTime.getSeconds())}
               <span>s</span>{" "}
             </h1>
           </div>
