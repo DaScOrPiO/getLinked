@@ -34,8 +34,8 @@ export default function Section1() {
   };
 
   return (
-    <div className="section-1-items w-full py-12">
-      <div className="flex flex-col items-end mb-24">
+    <div className="section-1-items w-full py-12 mb-48">
+      <div className="flex flex-col items-end">
         <h1 className="text-left section-1-header">
           Igniting a Revolution in HR Innovation
         </h1>
