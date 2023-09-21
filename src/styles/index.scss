@@ -44,6 +44,10 @@ body {
   @include text-colored;
 }
 
+.colored-text-2 {
+  color: $purple-1;
+}
+
 .border-right {
   border-right: 2px solid #d434fe;
 }
@@ -65,7 +69,7 @@ body {
   visibility: hidden;
 }
 
-.circle-mobile-x{
+.circle-mobile-x {
   display: none;
 }
 
@@ -251,6 +255,41 @@ body {
   }
 }
 
+.section-7-items {
+  .top {
+    h1 {
+      font-size: $fs-5;
+    }
+  }
+
+  .box-2 {
+    .award-1,
+    .award-2,
+    .award-3 {
+      position: relative;
+      .award-message {
+        position: absolute;
+        left: 20%;
+        top: 5vh;
+        .head-1 {
+          font-size: $fs-1;
+        }
+        .head-2 {
+          font-size: 22px;
+        }
+        p {
+          font-size: $fs-11;
+        }
+      }
+      .medal {
+        position: absolute;
+        top: -18vh;
+        left: 5%;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .border-right {
     border: none;
@@ -325,6 +364,35 @@ body {
     .box-2 {
       .questions-container {
         position: relative;
+      }
+    }
+  }
+
+  .section-7-items {
+    .box-2 {
+      .award-1,
+      .award-2,
+      .award-3 {
+        position: relative;
+        .award-message {
+          position: absolute;
+          left: 20%;
+          top: 10vh;
+          .head-1 {
+            font-size: $fs-1;
+          }
+          .head-2 {
+            font-size: 22px;
+          }
+          p {
+            font-size: $fs-11;
+          }
+        }
+        .medal {
+          position: absolute;
+          top: -10vh;
+          left: 5%;
+        }
       }
     }
   }
@@ -488,6 +556,42 @@ body {
           h1 {
             font-size: $fs-10;
           }
+        }
+      }
+    }
+  }
+
+  .section-7-items {
+    .top {
+      h1 {
+        font-size: $fs-9;
+      }
+    }
+
+    .box-2 {
+      .award-1,
+      .award-2,
+      .award-3 {
+        position: relative;
+        .award-message {
+          position: absolute;
+          left: 20%;
+          top: 3vh;
+          margin: 0;
+          .head-1 {
+            font-size: 10px;
+          }
+          .head-2 {
+            font-size: 10px;
+          }
+          p {
+            font-size: 10px;
+          }
+        }
+        .medal {
+          position: absolute;
+          top: -7vh;
+          z-index: 10;
         }
       }
     }
