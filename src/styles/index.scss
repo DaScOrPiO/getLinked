@@ -44,11 +44,29 @@ body {
   @include text-colored;
 }
 
+.border-right {
+  border-right: 2px solid #d434fe;
+}
+
 .border {
   border-radius: 50%;
   border: 2px solid transparent;
   border-image: $button-gradient;
   border-image-slice: 1;
+}
+
+.circle-general,
+.circle-mobile,
+.circle-mobile-x {
+  @include button-color;
+}
+
+.circle-mobile {
+  visibility: hidden;
+}
+
+.circle-mobile-x{
+  display: none;
 }
 
 .section-4-items {
@@ -156,7 +174,7 @@ body {
   .arrow-position {
     position: absolute;
     left: 42%;
-    top: 200%;
+    top: 200vh;
   }
 }
 
@@ -208,7 +226,51 @@ body {
   }
 }
 
+.section-6-items {
+  h1 {
+    font-size: $fs-5;
+  }
+  p {
+    font-size: $fs-8;
+  }
+
+  .box-2 {
+    .annconcement-container {
+      .topic {
+        h1 {
+          font-size: $fs-11;
+        }
+      }
+
+      .date {
+        h1 {
+          font-size: $fs-11;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1023px) {
+  .border-right {
+    border: none;
+  }
+
+  .border-rule {
+    border-left: 1px solid #d434fe;
+  }
+
+  .circle-general {
+    display: none;
+  }
+
+  .circle-mobile {
+    visibility: visible;
+  }
+  .circle-mobile-x {
+    display: none;
+  }
+
   .navigation-container {
     .hamburger {
       display: none;
@@ -257,7 +319,7 @@ body {
   }
 
   .section-5-items {
-    .box-1{
+    .box-1 {
       margin-bottom: 20%;
     }
     .box-2 {
@@ -269,6 +331,26 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  .border-right {
+    border: none;
+  }
+
+  .border-rule {
+    border-left: 1px solid #d434fe;
+  }
+
+  .circle-general {
+    display: none;
+  }
+
+  .circle-mobile {
+    display: none;
+  }
+
+  .circle-mobile-x {
+    display: flex;
+  }
+
   .navigation-container {
     .hamburger {
       display: flex;
@@ -372,7 +454,7 @@ body {
   }
 
   .section-5-items {
-    .box-1{
+    .box-1 {
       margin-bottom: 20%;
     }
     .box-2 {
@@ -380,6 +462,32 @@ body {
         position: relative;
         .question-2 {
           top: -25%;
+        }
+      }
+    }
+  }
+
+  .section-6-items {
+    h1 {
+      font-size: $fs-9;
+    }
+    p {
+      font-size: $fs-8;
+    }
+
+    .box-2 {
+      .annconcement-container {
+        position: relative;
+        .topic {
+          h1 {
+            font-size: $fs-10;
+          }
+        }
+
+        .date {
+          h1 {
+            font-size: $fs-10;
+          }
         }
       }
     }
