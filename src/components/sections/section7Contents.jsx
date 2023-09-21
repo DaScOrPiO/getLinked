@@ -16,7 +16,7 @@ export default function Section7() {
         </h1>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center">
+      <div className="container flex flex-wrap items-center justify-center">
         <div className="box-1 flex items-center lg:w-2/4 sm:w-full sm:h-auto lg:h-full justify-center mb-8">
           <img src={trophy} alt="trophy" />
         </div>

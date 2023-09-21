@@ -6,13 +6,11 @@ import Section4 from "../src/components/sections/section4Contents";
 import Section5 from "../src/components/sections/section5Contents";
 import Section6 from "../src/components/sections/section6Contents";
 import Section7 from "../src/components/sections/section7Contents";
+import Section8 from "../src/components/sections/section8Contents";
 
 export default function LandingPage() {
   return (
     <main className="app-container">
-      <header className="header px-12">
-        <Navigation />
-      </header>
       <div className="wrapper">
         <section className="mb-56">
           <Section1 />
@@ -35,6 +33,9 @@ export default function LandingPage() {
         </section>
         <section>
           <Section7 />
+        </section>
+        <section>
+          <Section8 />
         </section>
       </div>
     </main>

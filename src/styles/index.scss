@@ -7,6 +7,7 @@ body {
   background-color: $general-background;
   color: $white;
   font-family: "Montserrat-Light", sans-serif;
+  overflow-x: hidden
 }
 
 .button {
@@ -17,6 +18,7 @@ body {
 }
 .wrapper {
   padding: 0 3rem !important;
+  height: 100%;
 }
 
 .header {
@@ -44,12 +46,20 @@ body {
   @include text-colored;
 }
 
+.blue-text {
+  color: $blue;
+}
+
 .colored-text-2 {
   color: $purple-1;
 }
 
 .border-right {
-  border-right: 2px solid #d434fe;
+  border-right: 2px solid $main-purple;
+}
+
+.border-bottom {
+  border-bottom: 4px solid $main-purple;
 }
 
 .border {
@@ -256,11 +266,18 @@ body {
 }
 
 .section-7-items {
+  background: $background-gradient4;
   .top {
     h1 {
       font-size: $fs-5;
     }
   }
+
+  .container{
+  .box-1{
+    background: $background-gradient2;
+  }
+}
 
   .box-2 {
     .award-1,
@@ -270,7 +287,7 @@ body {
       .award-message {
         position: absolute;
         left: 20%;
-        top: 5vh;
+        top: 7vh;
         .head-1 {
           font-size: $fs-1;
         }
@@ -290,13 +307,35 @@ body {
   }
 }
 
+.section-8-items {
+  background: $background-gradient5;
+  .top-section {
+    h1 {
+      font-size: $fs-5;
+    }
+    p {
+      font-size: $fs-8;
+    }
+  }
+
+  .box-1 {
+    border: 1px solid $main-purple;
+    background: $background-gradient4;
+    .item-bottom {
+      .svg-container-2 {
+        font-size: $fs-12;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .border-right {
     border: none;
   }
 
   .border-rule {
-    border-left: 1px solid #d434fe;
+    border-left: 1px solid $main-purple;
   }
 
   .circle-general {
@@ -593,6 +632,38 @@ body {
           top: -7vh;
           z-index: 10;
         }
+      }
+    }
+  }
+
+  .section-8-items {
+    .top-section {
+      h1 {
+        font-size: $fs-9;
+      }
+      p {
+        font-size: $fs-10;
+      }
+    }
+
+    .box-1 {
+      border: 1px solid $main-purple;
+      position: relative;
+      .item-top {
+        .svg-container-1 {
+          position: relative;
+          .line-1 {
+            position: absolute;
+            right: 0%;
+            top: 0;
+          }
+        }
+      }
+
+      .item-bottom {
+        .svg-container-2 {
+          font-size: $fs-13;
+        }   
       }
     }
   }
