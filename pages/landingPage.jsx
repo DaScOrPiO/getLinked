@@ -5,6 +5,7 @@ import Section3 from "../src/components/sections/Section3Contents";
 import Section4 from "../src/components/sections/section4Contents";
 import Section5 from "../src/components/sections/section5Contents";
 import Section6 from "../src/components/sections/section6Contents";
+import Section7 from "../src/components/sections/section7Contents";
 
 export default function LandingPage() {
   return (
@@ -20,17 +21,20 @@ export default function LandingPage() {
         <section className="mt-56">
           <Section2 />
         </section>
-        <section className="">
+        <section>
           <Section3 />
         </section>
-        <section className="">
+        <section>
           <Section4 />
         </section>
-        <section className="">
+        <section>
           <Section5 />
         </section>
-        <section className="">
+        <section>
           <Section6 />
+        </section>
+        <section>
+          <Section7 />
         </section>
       </div>
     </main>
