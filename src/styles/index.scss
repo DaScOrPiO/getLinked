@@ -7,7 +7,7 @@ body {
   background-color: $general-background;
   color: $white;
   font-family: "Montserrat-Light", sans-serif;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 .button {
@@ -273,11 +273,11 @@ body {
     }
   }
 
-  .container{
-  .box-1{
-    background: $background-gradient2;
+  .container {
+    .box-1 {
+      background: $background-gradient2;
+    }
   }
-}
 
   .box-2 {
     .award-1,
@@ -325,6 +325,40 @@ body {
       .svg-container-2 {
         font-size: $fs-12;
       }
+    }
+  }
+}
+
+.section-9-items {
+  background: $background-gradient6;
+  .box-1 {
+    .text-wrapper {
+      h1 {
+        font-size: $fs-5;
+        font-weight: 700;
+      }
+      p {
+        font-size: $fs-8;
+      }
+    }
+
+    .texts {
+      border: 1px solid $main-purple;
+      p {
+        font-size: $fs-8;
+        text-align: left;
+      }
+      .head-p {
+        font-size: $fs-2;
+        text-align: left !important;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .box-2{
+    .image-1{
+      background: $background-gradient3;
     }
   }
 }
@@ -663,8 +697,12 @@ body {
       .item-bottom {
         .svg-container-2 {
           font-size: $fs-13;
-        }   
+        }
       }
     }
+  }
+
+  .section-9-items{
+    flex-wrap: wrap;
   }
 }

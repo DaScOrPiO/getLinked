@@ -1,11 +1,10 @@
 /* eslint-disable react/prop-types */
 export default function Star({ color, top, left }) {
   return (
-    <div style={{ position: "absolute", top: top, left: left }}>
+    <div style={{ position: "absolute", top: top, left: left, zIndex: "5" }}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="80"
-        height="50"
         viewBox="0 0 100 100"
         fill={color}
         stroke="none"

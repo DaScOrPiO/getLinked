@@ -1,4 +1,3 @@
-import Navigation from "../src/components/nav/Navigation";
 import Section1 from "../src/components/sections/Section1Contents";
 import Section2 from "../src/components/sections/Section2Contents";
 import Section3 from "../src/components/sections/Section3Contents";
@@ -7,6 +6,7 @@ import Section5 from "../src/components/sections/section5Contents";
 import Section6 from "../src/components/sections/section6Contents";
 import Section7 from "../src/components/sections/section7Contents";
 import Section8 from "../src/components/sections/section8Contents";
+import Section9 from "../src/components/sections/section9Contents";
 
 export default function LandingPage() {
   return (
@@ -36,6 +36,9 @@ export default function LandingPage() {
         </section>
         <section>
           <Section8 />
+        </section>
+        <section>
+          <Section9 />
         </section>
       </div>
     </main>
