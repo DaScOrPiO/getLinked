@@ -7,6 +7,7 @@ import Section6 from "../src/components/sections/section6Contents";
 import Section7 from "../src/components/sections/section7Contents";
 import Section8 from "../src/components/sections/section8Contents";
 import Section9 from "../src/components/sections/section9Contents";
+import Footer from "../src/components/footer/Footer"
 
 export default function LandingPage() {
   return (
@@ -40,6 +41,9 @@ export default function LandingPage() {
         <section>
           <Section9 />
         </section>
+        <footer>
+        <Footer />
+      </footer>
       </div>
     </main>
   );

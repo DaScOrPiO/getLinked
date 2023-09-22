@@ -431,9 +431,11 @@ body {
 }
 
 //contact page style rule
-.contact-container {
+.contact-container,
+.register {
   background: $background-gradient4;
-  .message {
+  .message,
+  .image {
     background: $background-gradient2;
     h1 {
       font-size: $fs-5;
@@ -459,15 +461,74 @@ body {
     }
     .form-inputs {
       .input {
+        padding: 5% 2%;
         background-color: inherit;
         border-radius: 4px;
         border: 1px solid #fff;
         background: rgba(255, 255, 255, 0.03);
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        &:invalid {
-          border: 1px solid red;
-          &:valid {
-            border: 1px solid #008000;
+        &:focus {
+          outline: none;
+          &:invalid {
+            border: 1px solid red;
+            &:valid {
+              border: 1px solid #008000;
+            }
+            &:placeholder-shown(:not(:valid)) {
+              border: 1px solid #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//register style rule
+.register {
+  .form-container {
+    background: #ffffff08;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    .box-1 {
+      h1 {
+        font-size: $fs-5;
+      }
+      small {
+        height: 25px;
+        border-bottom: 2px dashed $white;
+      }
+      .form-inputs-container {
+        .review {
+          color: #ff26b9;
+          margin-bottom: 5%;
+          border: none;
+          font-style: italic;
+        }
+        .inputs-container {
+          .input-container {
+            .input {
+              width: 90%;
+              margin: 0 5%;
+              padding: 5% 2%;
+              background-color: inherit;
+              border-radius: 4px;
+              border: 1px solid #fff;
+              background: rgba(255, 255, 255, 0.03);
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+              &:focus {
+                outline: none;
+                &:invalid {
+                  border: 1px solid red;
+                  &:valid {
+                    border: 1px solid #008000;
+                  }
+                  &:placeholder-shown(:not(:valid)) {
+                    border: 1px solid #fff;
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -586,6 +647,41 @@ body {
   .contact-container {
     .message {
       display: none;
+    }
+  }
+
+  //register page responsive style rule
+  .register {
+    .form-container {
+      .box-1 {
+        h1 {
+          font-size: $fs-5;
+        }
+        small {
+          height: 25px;
+          border-bottom: 2px dashed $white;
+        }
+        .form-inputs-container {
+          .inputs-container {
+            .input-container {
+              .input {
+                width: 90%;
+                margin: 0 5%;
+              }
+            }
+          }
+          .special {
+            flex-direction: row;
+            width: 100%;
+            .input-container {
+              width: 50%;
+              .input {
+                width: 85%;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -894,7 +990,7 @@ body {
     }
   }
 
-  //contact responsive page style rule
+  //contact page responsive page style rule
   .contact-container {
     .message {
       display: none;
@@ -904,6 +1000,42 @@ body {
       h1,
       p {
         font-size: $fs-4;
+      }
+    }
+  }
+
+  //register page responsive style rule
+  .register {
+    .form-container {
+      .box-1 {
+        h1 {
+          font-size: $fs-9;
+        }
+        small {
+          height: 25px;
+          border-bottom: 2px dashed $white;
+        }
+        .form-inputs-container {
+          .inputs-container {
+            flex-direction: column;
+            .input-container {
+              .input {
+                width: 100%;
+                margin: 0 5%;
+              }
+            }
+          }
+          .special {
+            flex-direction: row;
+            width: 100%;
+            .input-container {
+              width: 50%;
+              .input {
+                width: 85%;
+              }
+            }
+          }
+        }
       }
     }
   }

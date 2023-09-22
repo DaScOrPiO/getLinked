@@ -3,7 +3,6 @@ import Contact from "../pages/contact";
 import Register from "../pages/register";
 import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/nav/Navigation";
-import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -16,9 +15,6 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="register" element={<Register />} />
       </Routes>
-      <footer>
-        <Footer />
-      </footer>
     </>
   );
 }

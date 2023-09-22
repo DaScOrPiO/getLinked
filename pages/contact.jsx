@@ -8,7 +8,7 @@ import Button from "../src/components/reusables/Button";
 export default function Contact() {
   return (
     <div className="contact-container flex sm:flex-col lg:flex-row w-full flex-wrap px-12 py-6">
-      <div className="message flex flex-col lg:w-2/4 sm:w-full py-8 justify-start items-start mt-12">
+      <div className="message flex flex-col lg:w-2/4 sm:w-full py-8 justify-center items-start mt-12">
         <h1 className="colored-text">Get in Touch</h1>
         <p className="mt-5">Contact Information</p>
 
