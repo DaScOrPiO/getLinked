@@ -8,3 +8,10 @@
   background: $button-gradient;
   color: $white;
 }
+
+@mixin gradient-util {
+  background-image: $button-gradient;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
