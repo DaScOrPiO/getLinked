@@ -8,6 +8,7 @@ import { useState } from "react";
 import { baseUrl, contact } from "../src/endpoints/endpoints";
 import axios from "axios";
 import { notifySuccess, notifyError } from "../src/components/reusables/notify";
+import Star from "../src/components/reusables/Star"
 
 export default function Contact() {
   const [Input, setInput] = useState({
@@ -124,6 +125,11 @@ export default function Contact() {
           </div>
         </form>
       </div>
+
+      <Star top="10%" left="5%" color="#d434fe" />
+      <Star top="60%" left="50%" color="#d434fe" />
+      <Star top="20%" left="80%" color="darkgray" />
+      <Star top="75%" left="90%" color="#ffffff" />
     </div>
   );
 }

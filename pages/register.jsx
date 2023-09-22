@@ -12,6 +12,7 @@ import {
 import axios from "axios";
 import Success from "../src/components/reusables/Success";
 import { notifyError } from "../src/components/reusables/notify";
+import Star from "../src/components/reusables/Star";
 
 export default function Register() {
   const [categoryData, setCategoryData] = useState(null);
@@ -33,7 +34,7 @@ export default function Register() {
       //update category
       setCategoryData(req.data);
     } catch (err) {
-      console.log(err);
+      notifyError("Something went wrong, couldn't fetch categories ☹");
     }
   };
 
@@ -247,6 +248,10 @@ export default function Register() {
       </div>
 
       {renderSuccess && <Success func={closeSuccess} />}
+      <Star top="15%" left="2%" color="#d434fe"  />
+      <Star top="8%" left="90%" color="darkgray" />
+      <Star top="80%" left="50%" color="#903aff" />
+      <Star top="90%" left="2%" color="darkgray" />
     </div>
   );
 }
