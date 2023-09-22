@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import man from "../src/assets/images/d-graphic-designer-showing-thumbs-up-png-1.svg";
 import person1 from "../src/assets/images/person1.svg";
 import person2 from "../src/assets/images/person2.svg";
@@ -10,10 +10,12 @@ import {
   post_register,
 } from "../src/endpoints/endpoints";
 import axios from "axios";
-import { useState } from "react";
+import Success from "../src/components/reusables/Success";
+import { notifyError } from "../src/components/reusables/notify";
 
 export default function Register() {
   const [categoryData, setCategoryData] = useState(null);
+  const [renderSuccess, setRenderSuccess] = useState(false);
   const [Input, setInput] = useState({
     teamName: "",
     phone: "",
@@ -68,12 +70,19 @@ export default function Register() {
       ) {
         const req = await axios.post(url, req_body);
         console.log(req);
+        if (req.status === 201) {
+          setRenderSuccess(true);
+        }
       } else {
-        alert("incomplete inputs");
+        notifyError("Invalid input(s)");
       }
     } catch (err) {
-      console.log(err);
+      notifyError("Something went wrong with request ☹");
     }
+  };
+
+  const closeSuccess = () => {
+    setRenderSuccess(!renderSuccess);
   };
 
   useLayoutEffect(() => {
@@ -236,6 +245,8 @@ export default function Register() {
           </form>
         </div>
       </div>
+
+      {renderSuccess && <Success func={closeSuccess} />}
     </div>
   );
 }

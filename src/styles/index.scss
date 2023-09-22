@@ -21,6 +21,21 @@ body {
   height: 100%;
 }
 
+.successful{
+  position: fixed;
+  background: rgba(21, 14, 40, 0.93);
+  z-index: 10;
+  width: 100vw;
+  height: 200vh;
+  .success-check-container{
+    position: absolute;
+    top: 40vh;
+    h1{
+      font-size: $fs-5;
+    }
+  } 
+}
+
 .header {
   border-bottom: 1px solid $white;
   padding: 0 3rem !important;
@@ -692,6 +707,17 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  .successful{
+    height: 200vh;
+    .success-check-container{
+      position: absolute;
+      top: 20vh;
+      h1{
+        font-size: $fs-2;
+      }
+    } 
+  }
+
   .border-right {
     border: none;
   }

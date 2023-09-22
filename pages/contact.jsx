@@ -7,6 +7,7 @@ import Button from "../src/components/reusables/Button";
 import { useState } from "react";
 import { baseUrl, contact } from "../src/endpoints/endpoints";
 import axios from "axios";
+import { notifySuccess, notifyError } from "../src/components/reusables/notify";
 
 export default function Contact() {
   const [Input, setInput] = useState({
@@ -34,12 +35,14 @@ export default function Contact() {
       if (Input.email !== "" && Input.message !== "" && Input.name !== "") {
         const url = baseUrl + contact;
         const req = await axios.post(url, req_body);
-        console.log(req);
+        if (req.status === 201) {
+          notifySuccess("Your message was sent 🎉");
+        }
       } else {
-        alert("Invalid input(s)");
+        notifyError("Invalid input(s)");
       }
     } catch (err) {
-      console.log(err);
+      notifyError("something went wrong with request ☹")
     }
   };
 
