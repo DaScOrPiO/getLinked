@@ -8,7 +8,9 @@ export default function Section9() {
     <div className="section-9-items flex lg:flex-row sm:flex-col lg:flex-nowrap sm:flex-wrap w-full justify-center items-center py-12">
       <div className="box-1 flex lg:w-2/4 sm:w-full flex-col">
         <div className="text-wrapper flex flex-col">
-          <h1 className="mb-2">Privacy Policy and <span className="colored-text">Terms</span></h1>
+          <h1 className="mb-2">
+            Privacy Policy and <span className="colored-text">Terms</span>
+          </h1>
           <small className="mb-2">Last updated on September 12, 2023</small>
           <p className="mb-2">
             Below are our privacy & policy, which outline a lot of goodies. it’s
@@ -16,7 +18,7 @@ export default function Section9() {
           </p>
         </div>
 
-        <div className="texts flex flex-col lg:w-3/4 sm:w-full mt-12 py-6 px-6 justify-center items-center">
+        <div className="texts flex flex-col lg:w-3/4 sm:w-full mt-12 py-6 px-6 justify-start items-start">
           <p>
             At getlinked tech Hackathon 1.0, we value your privacy and are
             committed to protecting your personal information. This Privacy
@@ -25,22 +27,24 @@ export default function Section9() {
             participating in our event, you consent to the practices described
             in this policy.
           </p>
-          
+
           <p className="head-p colored-text mt-12">Licensing Policy</p>
-          <p>Here are terms of our Standard License:</p>
-          <ul className="mb-6">
-            <li>
+          <h6 className="head-p">Here are terms of our Standard License:</h6>
+          <ul className="list-con mb-6 px-12 mt-4">
+            <li className="mt-2">
               The Standard License grants you a non-exclusive right to navigate
-              and register for our event
+              and register for our event.
             </li>
 
-            <li>
+            <li className="mt-2">
               You are licensed to use the item available at any free source
-              sites, for your project developement
+              sites, for your project developement.
             </li>
           </ul>
 
-          <Button text="Read more" />
+          <div className="flex items-center justify-center w-full">
+            <Button text="Read more" />
+          </div>
         </div>
       </div>
       <div className="box-2 flex flex-col justify-center items-center">

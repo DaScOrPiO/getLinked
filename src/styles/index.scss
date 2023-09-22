@@ -353,12 +353,79 @@ body {
         text-align: left !important;
         font-weight: 700;
       }
+      .list-con {
+        list-style: none;
+        padding: 0;
+
+        li {
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url("../assets/images/list\ terms.svg");
+            background-size: cover;
+            margin-right: 10px;
+            vertical-align: middle;
+          }
+        }
+      }
     }
   }
 
-  .box-2{
-    .image-1{
+  .box-2 {
+    .image-1 {
       background: $background-gradient3;
+    }
+  }
+}
+
+.footer-section {
+  .last-text {
+    font-size: $fs-8;
+  }
+  .footer-content-wrapper {
+    .box-1 {
+      .top {
+        h1 {
+          font-size: $fs-11;
+          font-weight: 700;
+          font-family: "Oswald-Bold", sans-serif;
+        }
+        p {
+          font-size: $fs-8;
+        }
+      }
+      .small-text {
+        p {
+          font-size: $fs-10;
+        }
+      }
+    }
+
+    .box-2 {
+      h1 {
+        font-size: $fs-8;
+        font-weight: 700;
+        font-family: "Oswald-Bold", sans-serif;
+      }
+      ul > li {
+        font-size: $fs-10;
+      }
+    }
+
+    .box-3 {
+      h1 {
+        font-size: $fs-8;
+        font-weight: 700;
+        font-family: "Oswald-Bold", sans-serif;
+      }
+      .contact-1,
+      .contact-2 {
+        p {
+          font-size: $fs-10;
+        }
+      }
     }
   }
 }
@@ -702,7 +769,76 @@ body {
     }
   }
 
-  .section-9-items{
+  .section-9-items {
     flex-wrap: wrap;
+    .box-1 {
+      .text-wrapper {
+        h1 {
+          font-size: $fs-4;
+        }
+        p {
+          font-size: $fs-10;
+        }
+      }
+
+      .texts {
+        p {
+          font-size: $fs-10;
+        }
+        .head-p {
+          font-size: $fs-8;
+        }
+      }
+    }
+  }
+
+  .footer-section {
+    .last-text {
+      font-size: $fs-10;
+    }
+    .footer-content-wrapper {
+      .box-1 {
+        .top {
+          h1 {
+            font-size: $fs-9;
+            font-weight: 700;
+            font-family: "Oswald-Bold", sans-serif;
+          }
+          p {
+            font-size: $fs-10;
+          }
+        }
+        .small-text {
+          p {
+            font-size: $fs-10;
+          }
+        }
+      }
+
+      .box-2 {
+        h1 {
+          font-size: $fs-9;
+          font-weight: 700;
+          font-family: "Oswald-Bold", sans-serif;
+        }
+        ul > li {
+          font-size: $fs-10;
+        }
+      }
+
+      .box-3 {
+        h1 {
+          font-size: $fs-9;
+          font-weight: 700;
+          font-family: "Oswald-Bold", sans-serif;
+        }
+        .contact-1,
+        .contact-2 {
+          p {
+            font-size: $fs-10;
+          }
+        }
+      }
+    }
   }
 }
