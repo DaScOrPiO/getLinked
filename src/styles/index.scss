@@ -430,6 +430,51 @@ body {
   }
 }
 
+//contact page style rule
+.contact-container {
+  background: $background-gradient4;
+  .message {
+    background: $background-gradient2;
+    h1 {
+      font-size: $fs-5;
+      font-family: "Oswald-Bold", sans-serif;
+      font-weight: 700;
+    }
+    p {
+      font-size: $fs-2;
+    }
+    .contact-links {
+      p {
+        font-size: $fs-2;
+      }
+    }
+  }
+
+  .form {
+    background: #ffffff08;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    h1,
+    p {
+      font-size: $fs-9;
+    }
+    .form-inputs {
+      .input {
+        background-color: inherit;
+        border-radius: 4px;
+        border: 1px solid #fff;
+        background: rgba(255, 255, 255, 0.03);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        &:invalid {
+          border: 1px solid red;
+          &:valid {
+            border: 1px solid #008000;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .border-right {
     border: none;
@@ -534,6 +579,13 @@ body {
           left: 5%;
         }
       }
+    }
+  }
+
+  //contact page responsive style rule
+  .contact-container {
+    .message {
+      display: none;
     }
   }
 }
@@ -838,6 +890,20 @@ body {
             font-size: $fs-10;
           }
         }
+      }
+    }
+  }
+
+  //contact responsive page style rule
+  .contact-container {
+    .message {
+      display: none;
+    }
+
+    .form {
+      h1,
+      p {
+        font-size: $fs-4;
       }
     }
   }
