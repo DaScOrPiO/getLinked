@@ -7,6 +7,7 @@ import unnamed from "../../assets/images/1f4a5 (1).png";
 import line from "../../assets/images/line.svg";
 import Star from "../reusables/Star";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Section1() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -33,6 +34,11 @@ export default function Section1() {
     return `${hours}`;
   };
 
+  const navigate = useNavigate();
+  const redirect = () => {
+    navigate("/register");
+  };
+
   return (
     <div className="section-1-items w-full py-12 mb-48">
       <div className="flex flex-col items-end">
@@ -53,7 +59,7 @@ export default function Section1() {
             Participate in getlinked tech 2023 stand a chance to win a big price
           </p>
           <div className="lg:mb-24">
-            <Button text="Register" />
+            <Button text="Register" click={redirect} />
           </div>
 
           <div className="time">

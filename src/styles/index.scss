@@ -26,6 +26,14 @@ body {
   padding: 0 3rem !important;
 }
 
+.active-link{
+  @include gradient-util
+}
+
+.nav-button{
+  @include gradient-util
+}
+
 .navigation-container {
   .brand-text {
     font-size: $fs-1;
@@ -209,10 +217,7 @@ body {
         border-bottom: 2px solid #d434fe;
         .faq-answer {
           p {
-            background-image: $button-gradient;
-            color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
+            @include gradient-util
           }
         }
       }

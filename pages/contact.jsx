@@ -4,8 +4,45 @@ import instagram from "../src/assets/images/mdi_instagram.svg";
 import facebook from "../src/assets/images/facebook.svg";
 import { Link } from "react-router-dom";
 import Button from "../src/components/reusables/Button";
+import { useState } from "react";
+import { baseUrl, contact } from "../src/endpoints/endpoints";
+import axios from "axios";
 
 export default function Contact() {
+  const [Input, setInput] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInput((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
+
+  const sendMessage = async (e) => {
+    e.preventDefault();
+    const req_body = {
+      email: Input.email,
+      first_name: Input.name,
+      message: Input.message,
+    };
+
+    try {
+      if (Input.email !== "" && Input.message !== "" && Input.name !== "") {
+        const url = baseUrl + contact;
+        const req = await axios.post(url, req_body);
+        console.log(req);
+      } else {
+        alert("Invalid input(s)");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="contact-container flex sm:flex-col lg:flex-row w-full flex-wrap px-12 py-6">
       <div className="message flex flex-col lg:w-2/4 sm:w-full py-8 justify-center items-start mt-12">
@@ -44,26 +81,43 @@ export default function Contact() {
         <p className="colored-text">Let us know about it!</p>
 
         <form action="" className="form-inputs flex flex-col">
+          <label htmlFor="name" id="name"></label>
           <input
             type="text"
-            name=""
+            name="name"
             id="name"
             placeholder="First Name"
             required
             className="input mt-6"
+            value={Input.name}
+            onChange={handleChange}
           />
+          <label htmlFor="email" id="mail"></label>
           <input
             type="email"
-            name=""
-            id="name"
+            name="email"
+            id="mail"
             placeholder="Mail"
             required
             className="input mt-6"
+            value={Input.email}
+            onChange={handleChange}
           />
-          <textarea name="" id="" cols="30" rows="10" className="input mt-6" placeholder="message" required></textarea>
+          <label htmlFor="message" id="message"></label>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            className="input mt-6"
+            placeholder="message"
+            required
+            value={Input.message}
+            onChange={handleChange}
+          ></textarea>
 
           <div className="flex justify-center items-center w-full mt-6">
-            <Button text="submit" />
+            <Button text="submit" click={sendMessage} />
           </div>
         </form>
       </div>
