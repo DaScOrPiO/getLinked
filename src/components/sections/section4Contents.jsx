@@ -2,15 +2,36 @@ import thinking from "../../assets/images/thinking.svg";
 import ellipsis from "../../assets/images/Ellipse 2.svg";
 import Button from "../reusables/Button";
 import Star from "../reusables/Star";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 export default function Section4() {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
+  const In = {
+    y: [0, -20, 0],
+  };
+
+  const Out = {
+    y: [0, 20, 0],
+  };
+
   return (
-    <div
+    <motion.div
+      ref={ref}
+      initial={inView ? "In" : "Out"}
+      animate={inView ? "In" : "Out"}
+      variants={{
+        In,
+        Out,
+      }}
+      transition={{ duration: 0.9 }}
       className="section-4-items flex lg:flex-row sm:flex-col 
     flex-wrap w-full py-8 items-center justify-center"
     >
       <div
-        data-aos="fade-up-right"
         className="box-1 flex flex-col justify-center items-center 
       lg:w-2/4 sm:w-full lg:h-full sm:h-2/4"
       >
@@ -80,6 +101,6 @@ export default function Section4() {
       <Star top="320%" left="20%" color="#d434fe" type="tween" />
       <Star top="360%" left="40%" color="#903aff" type="spring" />
       <Star top="400%" left="60%" color="#ffffff" type="tween" />
-    </div>
+    </motion.div>
   );
 }
