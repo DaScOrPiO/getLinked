@@ -32,12 +32,17 @@ export default function Section5() {
           </p>
         </div>
 
-        <div className="faq-container w-full px-6 py-10">
+        <div
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+          className="faq-container w-full px-6 py-10"
+        >
           {faqData.map((el, i) => (
             <div className="faq py-8" key={el.id}>
               <div className="flex justify-between">
                 {el.question}
-                <span onClick={() => toggle(i)} className="cursor-pointer" >
+                <span onClick={() => toggle(i)} className="cursor-pointer">
                   {showAnswer[i] ? (
                     <AiOutlineMinus color="#d434fe" size="30px" />
                   ) : (
@@ -54,7 +59,11 @@ export default function Section5() {
           ))}
         </div>
       </div>
-      <div className="box-2 flex flex-col lg:w-2/4 sm:w-full lg:h-full sm:h-2/4 justify-center items-center">
+      <div
+        data-aos="flip-right"
+        className="box-2 flex flex-col lg:w-2/4 sm:w-full lg:h-full sm:h-2/4 
+      justify-center items-center"
+      >
         <div className="questions-container">
           <img src={man_thinking} alt="thoughts" loading="lazy" />
           <img src={question1} alt="thoughts" className="question-1" />
@@ -63,11 +72,11 @@ export default function Section5() {
         </div>
       </div>
 
-      <Star top="415%" left="2%" color="#903aff" />
-      <Star top="420%" left="68%" color="#d434fe" />
-      <Star top="440%" left="58%" color="#d434fe" />
-      <Star top="470%" left="50%" color="darkgray" />
-      <Star top="510%" left="82%" color="#ffffff" />
+      <Star top="415%" left="2%" color="#903aff" type="spring" />
+      <Star top="420%" left="68%" color="#d434fe" type="tween" />
+      <Star top="440%" left="58%" color="#d434fe" type="spring" />
+      <Star top="470%" left="50%" color="darkgray" type="spring" />
+      <Star top="510%" left="82%" color="#ffffff" type="tween" />
     </div>
   );
 }

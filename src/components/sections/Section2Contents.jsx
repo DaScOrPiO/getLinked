@@ -9,7 +9,12 @@ export default function Section2() {
       className="section-2-items mt-12 w-full lg:h-full sm:h-auto py-12 
     flex flex-wrap lg:flex-row sm:flex-col items-center"
     >
-      <div className="box-1 flex justify-center items-center lg:w-2/4 sm:w-full lg:h-full sm:h-2/4 py-8">
+      <div
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        className="box-1 flex justify-center items-center lg:w-2/4 sm:w-full lg:h-full sm:h-2/4 py-8"
+      >
         <img src={bigIdea} alt="idea" loading="lazy" />
       </div>
 
@@ -35,8 +40,8 @@ export default function Section2() {
         <img src={arrow} alt="arrow" />
       </div>
 
-      <Star top="160%" left="5%" color="#d434fe" />
-      <Star top="160%" left="90%" color="#903aff" />
+      <Star top="160%" left="5%" color="#d434fe" type="tween" />
+      <Star top="160%" left="90%" color="#903aff" type="spring" />
     </div>
   );
 }

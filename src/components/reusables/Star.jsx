@@ -1,7 +1,20 @@
 /* eslint-disable react/prop-types */
-export default function Star({ color, top, left }) {
+import { motion } from "framer-motion";
+
+export default function Star({ color, top, left, type }) {
   return (
-    <div style={{ position: "absolute", top: top, left: left, zIndex: "5" }}>
+    <motion.div
+      initial={{ opacity: 1 }}
+      animate={{ opacity: 0.2 }}
+      transition={{
+        duration: 5,
+        type: type,
+        stiffness: 120,
+        repeat: Infinity,
+      }}
+      className="star-component"
+      style={{ position: "absolute", top: top, left: left, zIndex: "5" }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="80"
@@ -17,6 +30,6 @@ export default function Star({ color, top, left }) {
           clipPath="polygon(50% 0, 57% 40%, 57% 40%, 100% 40%, 58% 51%, 52% 100%, 45% 51%, 4% 40%, 44% 39%);"
         ></path>
       </svg>
-    </div>
+    </motion.div>
   );
 }

@@ -5,18 +5,23 @@ import awardStand3 from "../../assets/images/Rectangle 21.svg";
 import award1 from "../../assets/images/bronze_medal 1.svg";
 import award2 from "../../assets/images/gold_medal 1.svg";
 import award3 from "../../assets/images/silver_medal 1.svg";
-import Star from "../reusables/Star";
 
 export default function Section7() {
   return (
     <div className="section-7-items flex flex-col w-full py-12">
-      <div className="top flex lg:justify-end sm:justify-center mb-12 lg:mx-40">
+      <div
+        data-aos="zoom-in"
+        className="top flex lg:justify-end sm:justify-center mb-12 lg:mx-40"
+      >
         <h1>
           Prizes and <span className="colored-text">Rewards</span>
         </h1>
       </div>
 
-      <div className="container flex flex-wrap items-center justify-center">
+      <div
+        data-aos="zoom-in-up"
+        className="container flex flex-wrap items-center justify-center"
+      >
         <div className="box-1 flex items-center lg:w-2/4 sm:w-full sm:h-auto lg:h-full justify-center mb-8">
           <img src={trophy} alt="trophy" />
         </div>
@@ -59,12 +64,6 @@ export default function Section7() {
           </div>
         </div>
       </div>
-
-      <Star top="680%" left="5%" color="#d434fe" />
-      <Star top="720%" left="40%" color="#ffffff" />
-      <Star top="750%" left="90%" color="#ffffff" />
-      <Star top="760%" left="5%" color="#ffffff" />
-      <Star top="765%" left="75%" color="darkgray" />
     </div>
   );
 }

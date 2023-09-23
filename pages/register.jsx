@@ -13,6 +13,7 @@ import axios from "axios";
 import Success from "../src/components/reusables/Success";
 import { notifyError } from "../src/components/reusables/notify";
 import Star from "../src/components/reusables/Star";
+import { motion } from "framer-motion";
 
 export default function Register() {
   const [categoryData, setCategoryData] = useState(null);
@@ -95,17 +96,25 @@ export default function Register() {
       className="register flex sm:flex-col lg:flex-row px-12 
   w-full justify-center items-center flex-wrap"
     >
-      <div
+      <motion.div
+        initial={{ rotate: 0 }}
+        animate={{ rotate: 360 }}
+        transition={{ duration: 2 }}
         className="image flex sm:flex-col lg:flex-row lg:w-2/4 sm:w-full 
     justify-center items-center"
       >
         <img src={man} alt="man" loading="lazy" />
-      </div>
+      </motion.div>
       <div
         className="form-container mt-12 mb-12 flex flex-col lg:w-2/4 sm:w-full 
     justify-center items-center"
       >
-        <div className="box-1 flex flex-col px-12 w-full">
+        <motion.div
+          initial={{ x: 500 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1 }}
+          className="box-1 flex flex-col px-12 w-full"
+        >
           <h1 className="mb-6 colored-text">Register</h1>
           <small className="flex mb-3">
             Be part of this movement{" "}
@@ -244,14 +253,14 @@ export default function Register() {
               <Button text="Register now" click={register} />
             </div>
           </form>
-        </div>
+        </motion.div>
       </div>
 
       {renderSuccess && <Success func={closeSuccess} />}
-      <Star top="15%" left="2%" color="#d434fe"  />
-      <Star top="8%" left="90%" color="darkgray" />
-      <Star top="80%" left="50%" color="#903aff" />
-      <Star top="90%" left="2%" color="darkgray" />
+      <Star top="15%" left="2%" color="#d434fe" type="spring" />
+      <Star top="8%" left="90%" color="darkgray" type="tween" />
+      <Star top="80%" left="50%" color="#903aff" type="spring" />
+      <Star top="90%" left="2%" color="darkgray" type="tween" />
     </div>
   );
 }
