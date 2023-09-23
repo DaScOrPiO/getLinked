@@ -43,9 +43,14 @@ export default function Section1() {
   return (
     <div className="section-1-items w-full py-12 mb-48">
       <div className="flex flex-col items-end">
-        <h1 className="text-left section-1-header">
+        <motion.h1
+          className="text-left section-1-header"
+          initial={{ x: 500, opacity: 0.2 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
           Igniting a Revolution in HR Innovation
-        </h1>
+        </motion.h1>
         <img src={line} alt="line" />
       </div>
       <div className="flex w-full lg:flex-row sm:flex-col sm:flex-wrap relative">
@@ -102,13 +107,41 @@ export default function Section1() {
         </div>
 
         <div className="absolute creative-position">
-          <img src={creative} alt="" />
+          <motion.img
+            src={creative}
+            alt=""
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 0.2 }}
+            transition={{
+              duration: 2,
+              type: "tween",
+              stiffness: 120,
+              repeat: Infinity,
+            }}
+          />
         </div>
         <div className="absolute fire-position">
-          <img src={unnamed} alt="" />
+          <motion.img
+            src={unnamed}
+            alt=""
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 0.2 }}
+            transition={{
+              duration: 5,
+              type: "spring",
+              stiffness: 120,
+              repeat: Infinity,
+            }}
+          />
         </div>
         <div className="absolute chain-position">
-          <img src={chain} alt="" />
+          <motion.img
+            src={chain}
+            alt=""
+            initial={{ rotateX: 0 }}
+            animate={{ rotateX: 360 }}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
         </div>
       </div>
 
