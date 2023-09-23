@@ -49,6 +49,12 @@ body {
   @include gradient-util;
 }
 
+.no-page {
+  .head {
+    @include gradient-util;
+  }
+}
+
 .navigation-container {
   .brand-text {
     font-size: $fs-1;
@@ -718,6 +724,13 @@ body {
       h1 {
         font-size: $fs-2;
       }
+    }
+  }
+
+  .no-page {
+    .head {
+      font-size: $fs-8;
+      @include gradient-util;
     }
   }
 
