@@ -7,6 +7,7 @@ import question3 from "../../assets/images/question3.svg";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import faqData from "../dummy";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Section5() {
   const [showAnswer, setShAnswer] = useState(Array(faqData.length).fill(false));
@@ -50,11 +51,19 @@ export default function Section5() {
                   )}
                 </span>
               </div>
-              {showAnswer[i] && (
-                <div className="faq-answer mt-4">
-                  <p className="text-wrap">{el.answer}</p>
-                </div>
-              )}
+              <AnimatePresence>
+                {showAnswer[i] && (
+                  <motion.div
+                    className="faq-answer mt-4"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.8, type: "tween" }}
+                  >
+                    <p className="text-wrap">{el.answer}</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>
