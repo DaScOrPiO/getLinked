@@ -8,6 +8,7 @@ import line from "../../assets/images/line.svg";
 import Star from "../reusables/Star";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion, LazyMotion, domAnimation, m } from "framer-motion";
 
 export default function Section1() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -75,12 +76,29 @@ export default function Section1() {
         </div>
 
         <div className="box-2 lg:h-full sm:h-2/4 lg:w-2/4 sm:w-full">
-          <div className="image-con-1">
-            <img src={man} alt="man" loading="lazy" />
-          </div>
-          <div className="image-con-2">
+          <LazyMotion features={domAnimation}>
+            <m.div
+              className="image-con-1"
+              initial={{ x: 2 }}
+              animate={{ x: 0 }}
+              transition={{
+                duration: 5,
+                type: "spring",
+                stiffness: 120,
+                repeat: Infinity,
+              }}
+            >
+              <img src={man} alt="man" loading="lazy" />
+            </m.div>
+          </LazyMotion>
+          <motion.div
+            className="image-con-2"
+            initial={{ rotate: 0, opacity: 0.5 }}
+            animate={{ rotate: 360, opacity: 1 }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
             <img src={world} alt="digital world" loading="lazy" />
-          </div>
+          </motion.div>
         </div>
 
         <div className="absolute creative-position">
@@ -94,9 +112,9 @@ export default function Section1() {
         </div>
       </div>
 
-      <Star top="30%" left="6%" color="#fff" />
-      <Star top="38%" left="52%" color="darkgray" />
-      <Star top="100%" left="30%" color="darkgray" />
+      <Star top="30%" left="6%" color="#fff" type="tween" />
+      <Star top="38%" left="52%" color="darkgray" type="spring" />
+      <Star top="100%" left="30%" color="darkgray" type="spring" />
     </div>
   );
 }

@@ -9,7 +9,12 @@ import Star from "../reusables/Star";
 
 export default function Section8() {
   return (
-    <div className="section-8-items flex flex-col justify-center items-center py-8">
+    <div
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      className="section-8-items flex flex-col justify-center items-center py-8"
+    >
       <div className="top-section mb-6 flex justify-center items-center flex-col">
         <h1>Partners and Sponsors</h1>
         <p>
@@ -50,9 +55,9 @@ export default function Section8() {
         </div>
       </div>
 
-      <Star top="780%" left="5%" color="#903aff" />
+      {/* <Star top="780%" left="5%" color="#903aff" />
       <Star top="800%" left="50%" color="#d434fe" />
-      <Star top="850%" left="55%" color="#ffffff" />
+      <Star top="850%" left="55%" color="#ffffff" /> */}
     </div>
   );
 }

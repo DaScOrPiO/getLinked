@@ -8,7 +8,8 @@ import { useState } from "react";
 import { baseUrl, contact } from "../src/endpoints/endpoints";
 import axios from "axios";
 import { notifySuccess, notifyError } from "../src/components/reusables/notify";
-import Star from "../src/components/reusables/Star"
+import Star from "../src/components/reusables/Star";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [Input, setInput] = useState({
@@ -43,7 +44,7 @@ export default function Contact() {
         notifyError("Invalid input(s)");
       }
     } catch (err) {
-      notifyError("something went wrong with request ☹")
+      notifyError("something went wrong with request ☹");
     }
   };
 
@@ -80,7 +81,12 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <div className="form flex flex-col px-12 py-6 mt-12 lg:w-2/4 sm:w-full">
+      <motion.div
+        initial={{ x: 500 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 1 }}
+        className="form flex flex-col px-12 py-6 mt-12 lg:w-2/4 sm:w-full"
+      >
         <h1 className="colored-text">Questions or need assistance?</h1>
         <p className="colored-text">Let us know about it!</p>
 
@@ -124,12 +130,12 @@ export default function Contact() {
             <Button text="submit" click={sendMessage} />
           </div>
         </form>
-      </div>
+      </motion.div>
 
-      <Star top="10%" left="5%" color="#d434fe" />
-      <Star top="60%" left="50%" color="#d434fe" />
-      <Star top="20%" left="80%" color="darkgray" />
-      <Star top="75%" left="90%" color="#ffffff" />
+      <Star top="10%" left="5%" color="#d434fe" type="tween" />
+      <Star top="60%" left="50%" color="#d434fe" type="tween" />
+      <Star top="20%" left="80%" color="darkgray" type="spring" />
+      <Star top="75%" left="90%" color="#ffffff" type="spring" />
     </div>
   );
 }

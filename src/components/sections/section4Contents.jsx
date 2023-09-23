@@ -5,8 +5,15 @@ import Star from "../reusables/Star";
 
 export default function Section4() {
   return (
-    <div className="section-4-items flex lg:flex-row sm:flex-col flex-wrap w-full py-8 items-center justify-center">
-      <div className="box-1 flex flex-col justify-center items-center lg:w-2/4 sm:w-full lg:h-full sm:h-2/4">
+    <div
+      className="section-4-items flex lg:flex-row sm:flex-col 
+    flex-wrap w-full py-8 items-center justify-center"
+    >
+      <div
+        data-aos="fade-up-right"
+        className="box-1 flex flex-col justify-center items-center 
+      lg:w-2/4 sm:w-full lg:h-full sm:h-2/4"
+      >
         <img src={thinking} alt="thinking" loading="lazy" className="z-10" />
         <img
           src={ellipsis}
@@ -15,7 +22,11 @@ export default function Section4() {
           className="ellipsis-position"
         />
       </div>
-      <div className="box-2 flex flex-col justify-center items-start flex-wrap lg:w-2/4 sm:w-full lg:h-full sm:h-2/4">
+      <div
+        data-aos="fade-up-left"
+        className="box-2 flex flex-col justify-center items-start flex-wrap 
+      lg:w-2/4 sm:w-full lg:h-full sm:h-2/4"
+      >
         <h1>
           Judging Criteria <span className="colored-text">Key attributes</span>
         </h1>
@@ -62,13 +73,13 @@ export default function Section4() {
         </div>
 
         <div className="mt-6">
-            <Button text="Read more" />
+          <Button text="Read more" />
         </div>
       </div>
 
-      <Star top="320%" left="20%" color="#d434fe" />
-      <Star top="360%" left="40%" color="#903aff" />
-      <Star top="400%" left="60%" color="#ffffff" />
+      <Star top="320%" left="20%" color="#d434fe" type="tween" />
+      <Star top="360%" left="40%" color="#903aff" type="spring" />
+      <Star top="400%" left="60%" color="#ffffff" type="tween" />
     </div>
   );
 }

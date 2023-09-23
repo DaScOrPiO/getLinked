@@ -1,11 +1,15 @@
-import Star from "../reusables/Star";
 import Circle from "../reusables/Circle";
 import CircleMobile from "../reusables/CircleMobile";
 import CircleMobileX from "../reusables/CircleMobileX";
 
 export default function Section6() {
   return (
-    <div className="section-6-items flex flex-col w-full py-8 flex-wrap justify-center">
+    <div
+      data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000"
+      className="section-6-items flex flex-col w-full py-8 flex-wrap justify-center"
+    >
       <div className="top flex flex-col w-full justify-center items-center mb-12">
         <h1>Timeline</h1>
         <p>
@@ -18,8 +22,10 @@ export default function Section6() {
         className="box-2 flex flex-col justify-center 
       items-center flex-wrap w-full mt-6"
       >
-        <div className="annconcement-container border-rule flex lg:flex-row sm:flex-col lg:w-3/4 sm:w-full mb-12 
-        sm:relative sm:mb-12 flex-wrap">
+        <div
+          className="annconcement-container border-rule flex lg:flex-row sm:flex-col lg:w-3/4 sm:w-full mb-12 
+        sm:relative sm:mb-12 flex-wrap"
+        >
           <div className="topic border-right flex flex-col items-start word-wrap lg:w-2/4 sm:w-full px-10 relative">
             <h1 className="colored-text">Hackathon Announcement</h1>
             <p>
@@ -37,8 +43,10 @@ export default function Section6() {
           <CircleMobileX number="1" bottom="-4vh" left="-5%" />
         </div>
 
-        <div className="annconcement-container border-rule flex lg:flex-row sm:flex-col lg:w-3/4 sm:w-full mb-12 
-        sm:relative sm:mb-12 flex-wrap-reverse">
+        <div
+          className="annconcement-container border-rule flex lg:flex-row sm:flex-col lg:w-3/4 sm:w-full mb-12 
+        sm:relative sm:mb-12 flex-wrap-reverse"
+        >
           <div className="date border-right flex items-end lg:w-2/4 sm:w-full px-10 relative">
             <h1 className="colored-text">November 18 2023</h1>
             <Circle number="2" bottom="-6vh" left="96%" />
@@ -56,8 +64,10 @@ export default function Section6() {
           <CircleMobileX number="2" bottom="-4vh" left="-5%" />
         </div>
 
-        <div className="annconcement-container border-rule flex lg:flex-row sm:flex-col lg:w-3/4 sm:w-full mb-12 
-        sm:relative sm:mb-12 flex-wrap">
+        <div
+          className="annconcement-container border-rule flex lg:flex-row sm:flex-col lg:w-3/4 sm:w-full mb-12 
+        sm:relative sm:mb-12 flex-wrap"
+        >
           <div className="topic border-right flex flex-col items-start word-wrap lg:w-2/4 sm:w-full px-10 relative">
             <h1 className="colored-text">Teams Registration ends</h1>
             <p>Interested Participants are no longer Allowed to register</p>
@@ -72,8 +82,10 @@ export default function Section6() {
           <CircleMobileX number="3" bottom="-4vh" left="-5%" />
         </div>
 
-        <div className="annconcement-container border-rule flex lg:flex-row sm:flex-col lg:w-3/4 sm:w-full mb-12 
-        sm:relative sm:mb-12 flex-wrap-reverse">
+        <div
+          className="annconcement-container border-rule flex lg:flex-row sm:flex-col lg:w-3/4 sm:w-full mb-12 
+        sm:relative sm:mb-12 flex-wrap-reverse"
+        >
           <div className="date border-right flex items-end lg:w-2/4 sm:w-full px-10 relative">
             <h1 className="colored-text">November 18 2023</h1>
             <Circle number="4" bottom="-6vh" left="96%" />
@@ -93,8 +105,10 @@ export default function Section6() {
           <CircleMobileX number="4" bottom="-4vh" left="-5%" />
         </div>
 
-        <div className="annconcement-container border-rule flex lg:flex-row sm:flex-col lg:w-3/4 sm:w-full mb-12 
-        sm:relative sm:mb-12 flex-wrap">
+        <div
+          className="annconcement-container border-rule flex lg:flex-row sm:flex-col lg:w-3/4 sm:w-full mb-12 
+        sm:relative sm:mb-12 flex-wrap"
+        >
           <div className="topic border-right flex flex-col items-start word-wrap lg:w-2/4 sm:w-full px-10 relative">
             <h1 className="colored-text">
               Getlinked Hackathon 1.0 Offically Begins
@@ -114,8 +128,11 @@ export default function Section6() {
           <CircleMobileX number="5" bottom="-4vh" left="-5%" />
         </div>
 
-        <div className="annconcement-container border-rule flex lg:flex-row sm:flex-col lg:w-3/4 sm:w-full mb-12 
-        sm:relative sm:mb-12 flex-wrap-reverse">
+        <div
+          data-aos="flip-up"
+          className="annconcement-container border-rule flex lg:flex-row sm:flex-col lg:w-3/4 sm:w-full mb-12 
+        sm:relative sm:mb-12 flex-wrap-reverse"
+        >
           <div className="date border-right flex items-end lg:w-2/4 sm:w-full px-10 relative">
             <h1 className="colored-text">November 18 2023</h1>
             <Circle number="6" bottom="-6vh" left="96%" />
@@ -133,10 +150,6 @@ export default function Section6() {
           <CircleMobileX number="6" bottom="-4vh" left="-5%" />
         </div>
       </div>
-
-      <Star top="540%" left="20%" color="#903aff" />
-      <Star top="580%" left="90%" color="#ffffff" />
-      <Star top="650%" left="5%" color="darkgray" />
     </div>
   );
 }

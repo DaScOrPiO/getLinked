@@ -21,19 +21,19 @@ body {
   height: 100%;
 }
 
-.successful{
+.successful {
   position: fixed;
   background: rgba(21, 14, 40, 0.93);
   z-index: 10;
   width: 100vw;
   height: 200vh;
-  .success-check-container{
+  .success-check-container {
     position: absolute;
     top: 40vh;
-    h1{
+    h1 {
       font-size: $fs-5;
     }
-  } 
+  }
 }
 
 .header {
@@ -41,12 +41,12 @@ body {
   padding: 0 3rem !important;
 }
 
-.active-link{
-  @include gradient-util
+.active-link {
+  @include gradient-util;
 }
 
-.nav-button{
-  @include gradient-util
+.nav-button {
+  @include gradient-util;
 }
 
 .navigation-container {
@@ -232,7 +232,7 @@ body {
         border-bottom: 2px solid #d434fe;
         .faq-answer {
           p {
-            @include gradient-util
+            @include gradient-util;
           }
         }
       }
@@ -506,6 +506,9 @@ body {
 
 //register style rule
 .register {
+  .image {
+    border-radius: 50%;
+  }
   .form-container {
     background: #ffffff08;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -707,15 +710,15 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .successful{
+  .successful {
     height: 200vh;
-    .success-check-container{
+    .success-check-container {
       position: absolute;
       top: 20vh;
-      h1{
+      h1 {
         font-size: $fs-2;
       }
-    } 
+    }
   }
 
   .border-right {

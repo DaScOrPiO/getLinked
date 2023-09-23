@@ -6,6 +6,7 @@ export default function Section3() {
   return (
     <div className="section-3-items flex flex-wrap-reverse lg:flex-row sm:flex-col w-full sm:h-auto lg:h-full py-12">
       <div
+        data-aos="fade-left"
         className="box-1 flex items-center justify-center flex-col break-words 
       lg:w-2/4 sm:w-full lg:h-full sm:h-2/4 lg:m-auto"
       >
@@ -21,12 +22,16 @@ export default function Section3() {
           change the world, that's what we're all about!
         </p>
       </div>
-      <div className="box-2 flex items-center justify-center flex-col lg:w-2/4 sm:w-full lg:h-full sm:h-2/4">
+      <div
+        data-aos="fade-right"
+        className="box-2 flex items-center justify-center flex-col lg:w-2/4 
+      sm:w-full lg:h-full sm:h-2/4"
+      >
         <img src={lady} alt="reading" />
       </div>
 
-      <Star top="260%" left="40%" color="#d434fe" />
-      <Star top="300%" left="60%" color="#ffffff" />
+      <Star top="260%" left="40%" color="#d434fe" type="tween" />
+      <Star top="300%" left="60%" color="#ffffff" type="tween" />
     </div>
   );
 }
